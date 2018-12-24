@@ -179,7 +179,7 @@
 <p>首先有一个版本概念，版本是由于软件的迭代更新而使用的一种标记。<br>一般的数字类型版本号是这样组成的：  <strong>主版本:次版本:修复记号</strong> ，  这是一般的划分，不同的软件有不同的技巧。<br>一般软件有大的更新换代会升级主版本号，有了新的小功能或者做一些完善会升级次版本号，修复记号则是为了标志所解决的一些bug、漏洞之类的。</p>
 <p>对于mysql而言，前几年一直都是5.×，即主版本号为5 ， 而今年有了一次很大的更新，众所周知，MySQL是一款关系型数据库产品，而近来随着智能科学和数据科学的发展，传统的关系型数据库已经力不从心，更多的是用redis、mongodb这样的非关系型数据库，mysql也意识到了这个趋势，做了一次大的更新，新版mysql增加了对非关系型数据的支持，值得注意的是，新的mysql主版本官网直接标到了8.0，可能是软件中间的迭代过程比较快，官网就直接把最新的8.0发布了。</p>
 <p>mysql8.× 与 mysql5.× 在普通的数据库访问没有大的变化，变化比较大是驱动的名字<br>在5.×中mysql得到java驱动加载是：</p>
-<pre><code>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);
+<pre><code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
 </code></pre><p>而在8.×中则是</p>
 <pre><code>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);
 </code></pre><p>看出来了吧，名字变了，其他的操作是一样的，至于具体的细节变化我也没有深入研究。只是想说其实都一样。理解了就行了，就像是windowsXP和windows10的关系一样，改了改风格和外表，用的时候还是点开机、双击weGame、打开LOL、关机， emmm  就是这样。</p>
