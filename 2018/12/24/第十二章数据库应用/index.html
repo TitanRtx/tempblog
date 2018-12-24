@@ -8,19 +8,22 @@
   <link rel="dns-prefetch" href="https://titanrtx.github.io/tempblog">
   <title>第十二章数据库应用 | TitanRtx的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="第一步 ： 安装数据库当然如果您已经安装过了，可以跳过这一步。到底有没有安装过，打开cmd工具输入： mysql -v 如果出现了mysql版本信息，那么证明您的数据库是能用的，至于密码忘记了，emmm，删了重装吧。 安装数据库怎样才最简单呢， 对于windows用户来说一个软件就搞定了mysql windows版安装包：传送门在此,(将此链接复制到迅雷下载更快) 注意事项： 目前mysql最">
+<meta property="og:type" content="article">
 <meta property="og:title" content="第十二章数据库应用">
 <meta property="og:url" content="https://titanrtx.github.io/tempblog/2018/12/24/第十二章数据库应用/index.html">
 <meta property="og:site_name" content="TitanRtx的博客">
+<meta property="og:description" content="第一步 ： 安装数据库当然如果您已经安装过了，可以跳过这一步。到底有没有安装过，打开cmd工具输入： mysql -v 如果出现了mysql版本信息，那么证明您的数据库是能用的，至于密码忘记了，emmm，删了重装吧。 安装数据库怎样才最简单呢， 对于windows用户来说一个软件就搞定了mysql windows版安装包：传送门在此,(将此链接复制到迅雷下载更快) 注意事项： 目前mysql最">
 <meta property="og:locale" content="zH-CN">
-<meta property="og:updated_time" content="2018-12-24T06:12:41.038Z">
+<meta property="og:updated_time" content="2018-12-24T07:48:25.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第十二章数据库应用">
+<meta name="twitter:description" content="第一步 ： 安装数据库当然如果您已经安装过了，可以跳过这一步。到底有没有安装过，打开cmd工具输入： mysql -v 如果出现了mysql版本信息，那么证明您的数据库是能用的，至于密码忘记了，emmm，删了重装吧。 安装数据库怎样才最简单呢， 对于windows用户来说一个软件就搞定了mysql windows版安装包：传送门在此,(将此链接复制到迅雷下载更快) 注意事项： 目前mysql最">
   
     <link rel="alternative" href="/atom.xml" title="TitanRtx的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="http://img3.imgtn.bdimg.com/it/u=3724237267,1687836336&fm=26&gp=0.jpg">
   
   <link rel="stylesheet" type="text/css" href="/tempblog/./main.0cf68a.css">
   <style type="text/css">
@@ -78,13 +81,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="github" target="_blank" href="https://titanrtx.github.io/blog/" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -119,13 +116,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="github" target="_blank" href="https://titanrtx.github.io/blog/" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -171,7 +162,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1326596082&auto=1&height=66"></iframe>
+
+<h2 id="第一步-：-安装数据库"><a href="#第一步-：-安装数据库" class="headerlink" title="第一步 ： 安装数据库"></a>第一步 ： 安装数据库</h2><p>当然如果您已经安装过了，可以跳过这一步。<br>到底有没有安装过，打开cmd工具输入：</p>
+<pre><code>mysql -v
+</code></pre><p>如果出现了mysql版本信息，那么证明您的数据库是能用的，至于密码忘记了，emmm，删了重装吧。</p>
+<p>安装数据库怎样才最简单呢， 对于windows用户来说一个软件就搞定了<br>mysql windows版安装包：<a href="https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-8.0.13.0.msi" target="_blank" rel="noopener">传送门在此,(将此链接复制到迅雷下载更快)</a></p>
+<pre><code>注意事项：
+目前mysql最新版本是8.0，8.0的操作与书上的不太一样，所以我在这里推荐的是5.7版本（上一个版本）
+</code></pre><p>下载完毕打开安装程序，然后接下来就是一直下一步了。具体可以参考：<a href="https://jingyan.baidu.com/article/0bc808fc1fb9761bd585b97d.html" target="_blank" rel="noopener">mysql安装(百度经验)</a></p>
+<h2 id="第二步-：-下载java与mysql的连接器jar包"><a href="#第二步-：-下载java与mysql的连接器jar包" class="headerlink" title="第二步 ： 下载java与mysql的连接器jar包"></a>第二步 ： 下载java与mysql的连接器jar包</h2><p>数据库安装完毕之后接下来就是下载java与mysql连接需要的连接器<br>（mysql本身提供的是网络服务，连接器做的就是提供了数据库访问的java接口实现类）</p>
+<p>mysql-connector-java-5.1连接器下载:<a href="https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip" target="_blank" rel="noopener">传送门</a><br>下载完压缩包之后，解压发现有个 mysql-connector-java-5.1.47.jar 他就是连接器，本身是一个jar包</p>
+<h2 id="第三步-：-开始敲代码啦！啦啦啦啦"><a href="#第三步-：-开始敲代码啦！啦啦啦啦" class="headerlink" title="第三步 ： 开始敲代码啦！啦啦啦啦"></a>第三步 ： 开始敲代码啦！啦啦啦啦</h2><h4 id="1-打开eclipse新建工程"><a href="#1-打开eclipse新建工程" class="headerlink" title="1. 打开eclipse新建工程"></a>1. 打开eclipse新建工程</h4><h4 id="2-将连接器jar包加入Build-Path"><a href="#2-将连接器jar包加入Build-Path" class="headerlink" title="2. 将连接器jar包加入Build Path"></a>2. 将连接器jar包加入Build Path</h4><h4 id="3-新建一个类和main方法就可以开始写访问数据库的代码了"><a href="#3-新建一个类和main方法就可以开始写访问数据库的代码了" class="headerlink" title="3. 新建一个类和main方法就可以开始写访问数据库的代码了"></a>3. 新建一个类和main方法就可以开始写访问数据库的代码了</h4>
       
 
       
@@ -184,8 +186,13 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>喜欢的话支持一下哦， 您的支持是作者的动力<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://s1.ax1x.com/2018/12/24/F653p6.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
                     
                     
                   </div>
