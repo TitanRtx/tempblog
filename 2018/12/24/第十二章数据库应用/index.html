@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="TitanRtx的博客">
 <meta property="og:description" content="第一步 ： 安装数据库当然如果您已经安装过了，可以跳过这一步。到底有没有安装过，打开cmd工具输入： mysql --version 如果出现了mysql版本信息，那么证明您的数据库是能用的，至于密码忘记了，emmm，删了重装吧。 安装数据库怎样才最简单呢， 对于windows用户来说一个软件就搞定了mysql windows版安装包：传送门在此,(将此链接复制到迅雷下载更快) 注意事项： 目">
 <meta property="og:locale" content="zH-CN">
-<meta property="og:updated_time" content="2018-12-24T07:56:06.600Z">
+<meta property="og:updated_time" content="2018-12-24T10:50:51.628Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第十二章数据库应用">
 <meta name="twitter:description" content="第一步 ： 安装数据库当然如果您已经安装过了，可以跳过这一步。到底有没有安装过，打开cmd工具输入： mysql --version 如果出现了mysql版本信息，那么证明您的数据库是能用的，至于密码忘记了，emmm，删了重装吧。 安装数据库怎样才最简单呢， 对于windows用户来说一个软件就搞定了mysql windows版安装包：传送门在此,(将此链接复制到迅雷下载更快) 注意事项： 目">
@@ -173,7 +173,19 @@
 </code></pre><p>下载完毕打开安装程序，然后接下来就是一直下一步了。具体可以参考：<a href="https://jingyan.baidu.com/article/0bc808fc1fb9761bd585b97d.html" target="_blank" rel="noopener">mysql安装(百度经验)</a></p>
 <h2 id="第二步-：-下载java与mysql的连接器jar包"><a href="#第二步-：-下载java与mysql的连接器jar包" class="headerlink" title="第二步 ： 下载java与mysql的连接器jar包"></a>第二步 ： 下载java与mysql的连接器jar包</h2><p>数据库安装完毕之后接下来就是下载java与mysql连接需要的连接器<br>（mysql本身提供的是网络服务，连接器做的就是提供了数据库访问的java接口实现类）</p>
 <p>mysql-connector-java-5.1连接器下载:<a href="https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip" target="_blank" rel="noopener">传送门</a><br>下载完压缩包之后，解压发现有个 mysql-connector-java-5.1.47.jar 他就是连接器，本身是一个jar包</p>
-<h2 id="第三步-：-开始敲代码啦！啦啦啦啦"><a href="#第三步-：-开始敲代码啦！啦啦啦啦" class="headerlink" title="第三步 ： 开始敲代码啦！啦啦啦啦"></a>第三步 ： 开始敲代码啦！啦啦啦啦</h2><h4 id="1-打开eclipse新建工程"><a href="#1-打开eclipse新建工程" class="headerlink" title="1. 打开eclipse新建工程"></a>1. 打开eclipse新建工程</h4><h4 id="2-将连接器jar包加入Build-Path"><a href="#2-将连接器jar包加入Build-Path" class="headerlink" title="2. 将连接器jar包加入Build Path"></a>2. 将连接器jar包加入Build Path</h4><h4 id="3-新建一个类和main方法就可以开始写访问数据库的代码了"><a href="#3-新建一个类和main方法就可以开始写访问数据库的代码了" class="headerlink" title="3. 新建一个类和main方法就可以开始写访问数据库的代码了"></a>3. 新建一个类和main方法就可以开始写访问数据库的代码了</h4>
+<h2 id="第三步-：-开始敲代码啦！啦啦啦啦"><a href="#第三步-：-开始敲代码啦！啦啦啦啦" class="headerlink" title="第三步 ： 开始敲代码啦！啦啦啦啦"></a>第三步 ： 开始敲代码啦！啦啦啦啦</h2><h4 id="1-打开eclipse新建工程"><a href="#1-打开eclipse新建工程" class="headerlink" title="1. 打开eclipse新建工程"></a>1. 打开eclipse新建工程</h4><h4 id="2-将连接器jar包复制到工程里面"><a href="#2-将连接器jar包复制到工程里面" class="headerlink" title="2. 将连接器jar包复制到工程里面"></a>2. 将连接器jar包复制到工程里面</h4><pre><code>哪里都行，只要在这个工程里，我把它放到了根目录:
+![](https://s1.ax1x.com/2018/12/24/F6jKW4.png)
+</code></pre><h4 id="3-将jar包加入BuildPath"><a href="#3-将jar包加入BuildPath" class="headerlink" title="3. 将jar包加入BuildPath"></a>3. 将jar包加入BuildPath</h4><pre><code>加入buildpath是为了eclipse知道您的项目都用了哪些包，这些包在哪里，具体的做法是，右击刚刚您复制到项目目录里的jar包，鼠标放到buildpath选项，会弹出**Add to buildpath**选项，点击之后，便成功的加入buildpath里面了。之后您就可以调用里面的mysql数据库驱动了，因为eclipse会分析这个包，并给您提示，在编译的时候eclipse也会把包加入到程序中。
+</code></pre><h4 id="3-新建一个类和main方法就可以开始写访问数据库的代码了"><a href="#3-新建一个类和main方法就可以开始写访问数据库的代码了" class="headerlink" title="3. 新建一个类和main方法就可以开始写访问数据库的代码了"></a>3. 新建一个类和main方法就可以开始写访问数据库的代码了</h4><pre><code>可以看书上的代码
+</code></pre><h2 id="下面是问题区："><a href="#下面是问题区：" class="headerlink" title="下面是问题区："></a>下面是问题区：</h2><h4 id="1-为什么不能用新版本的mysql8-0？"><a href="#1-为什么不能用新版本的mysql8-0？" class="headerlink" title="1. 为什么不能用新版本的mysql8.0？"></a>1. 为什么不能用新版本的mysql8.0？</h4><p>不是不能用，而是<strong>新版本有些微调，跟书上不一样</strong></p>
+<p>首先有一个版本概念，版本是由于软件的迭代更新而使用的一种标记。<br>一般的数字类型版本号是这样组成的：  <strong>主版本:次版本:修复记号</strong> ，  这是一般的划分，不同的软件有不同的技巧。<br>一般软件有大的更新换代会升级主版本号，有了新的小功能或者做一些完善会升级次版本号，修复记号则是为了标志所解决的一些bug、漏洞之类的。</p>
+<p>对于mysql而言，前几年一直都是5.×，即主版本号为5 ， 而今年有了一次很大的更新，众所周知，MySQL是一款关系型数据库产品，而近来随着智能科学和数据科学的发展，传统的关系型数据库已经力不从心，更多的是用redis、mongodb这样的非关系型数据库，mysql也意识到了这个趋势，做了一次大的更新，新版mysql增加了对非关系型数据的支持，值得注意的是，新的mysql主版本官网直接标到了8.0，可能是软件中间的迭代过程比较快，官网就直接把最新的8.0发布了。</p>
+<p>mysql8.× 与 mysql5.× 在普通的数据库访问没有大的变化，变化比较大是驱动的名字<br>在5.×中mysql得到java驱动加载是：</p>
+<pre><code>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);
+</code></pre><p>而在8.×中则是</p>
+<pre><code>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);
+</code></pre><p>看出来了吧，名字变了，其他的操作是一样的，至于具体的细节变化我也没有深入研究。只是想说其实都一样。理解了就行了，就像是windowsXP和windows10的关系一样，改了改风格和外表，用的时候还是点开机、双击weGame、打开LOL、关机， emmm  就是这样。</p>
+
       
 
       
